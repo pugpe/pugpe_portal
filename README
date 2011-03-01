@@ -1,0 +1,38 @@
+###########################################################################
+##                                                                       ##
+##                       README DA VERSÃO 1.0                            ##
+##                                                                       ##
+##              Mote dessa versão: "Devagar se vai ao longe"             ##
+##                                                                       ##
+###########################################################################
+
+
+   Esta versão será simples. É um ponto de partida para o portal e é, também,
+uma medida apressada de ter algo no ar antes do XI encontro do grupo. Vamos
+nos concentrar em idealizar "o que será" definindo "o que é" ( Profundo LOL).
+
+O QUE VAI SER O PORTAL NESTA FASE?
+   O portal do PUG-PE será uma espécie de hotsite, por ser simples, e por ser
+ao todo uma única página.
+   Nesta página teremos o link para o hotsite do próximo evento, para o hotsite
+do evento anterior, um link para o blog e um link para o twitter do grupo.
+   Para rechear a primeira página, vamos replicar as 10 entradas mais recentes
+do feed do blog do PUG-PE dentro da página inicial, com links para essa postagem.
+Talvez um widget com as últimas mensagens e mentions no Twitter, cabe discussão aqui.
+
+   É simples, mas é o suficiente para resolver a demanda atual.
+
+
+COMO VAI SER FEITO?
+   Já pensando no futuro, partindo do estado atual, todo o desenvolvimento, por
+mais simples que pareça agora, será desenvolvido em Django.
+   Na verdade, a única programação de fato será a replicação dos feeds.
+
+
+COMO CONTRIBUIR?
+   De toda forma!
+   Através da ajuda nos layouts, opiniões, discussões, debugando e codificando!
+
+
+O QUE VEM A SEGUIR?
+   Idealizar um CMS que atenda as necessidades do portal.

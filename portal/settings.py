@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'tagging',
     'portal.apps.blog',
     'portal.apps.gallery',
+    'portal.apps.badges',
 )
 
 

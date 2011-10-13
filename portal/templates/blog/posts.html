@@ -1,0 +1,17 @@
+{% comment %}
+Precisa estender de base, quando esta estiver pronta
+{% extends "base.html" %}
+{% endcomment %}
+
+{% block content %}
+    <h2>Posts</h2>
+    <div id="content">
+        {% for post in object_list %}
+            <div class="post">
+            <h3><a href="{% url post post.slug %}">{{ post.title }}</a></h3>
+            {{ post.content|linebreaks }}
+            <p>Por: {{ post.author.username }} em {{ post.pub_date }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

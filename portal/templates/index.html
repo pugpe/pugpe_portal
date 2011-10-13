@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #376A94;
+      }
+      body {
+        padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+      }
+      .container > footer p {
+        text-align: center; /* center align it with the container */
+      }
+      .container {
+        width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+      }
+
+      /* The white background content wrapper */
+      .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+        -webkit-border-radius: 6px 6px 6px 6px;
+           -moz-border-radius: 6px 6px 6px 6px;
+                border-radius: 6px 6px 6px 6px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+      /* Page header tweaks */
+      .page-header {
+        background-color: #f5f5f5;
+        min-height: 150px;
+        padding: 20px 20px 10px;
+        margin: -20px -20px 20px;
+        -webkit-border-radius: 6px 6px 0px 0px;
+           -moz-border-radius: 6px 6px 0px 0px;
+                border-radius: 6px 6px 0px 0px;
+                box-shadow: 0 -1px 2px rgba(0,0,0,.15);
+        -webkit-box-shadow: 0 -1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 -1px 2px rgba(0,0,0,.15);
+      }
+
+      /* Styles you shouldn't keep as they are for displaying this base example only */
+      .content .span10 {
+        min-height: 600px;
+      }
+       
+      .content .span14 {
+        min-height: 200px;
+        background-color:  #eee;
+        
+      }
+      .content .span4 {
+        min-height: 150px;
+      }
+      
+      .content .span9 {
+          min-height: 150px;
+          background-color:  #fff;
+          margin-bottom: 10px;
+        }
+        
+      /* Give a quick and non-cross-browser friendly divider */
+      .content .span4 {
+        margin-left: 0;
+        padding-left: 19px;
+        border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+      }
+
+      .topbar .btn {
+        border: 0;
+      }
+
+	  .content h3 {
+		  margin-top: 20px;
+	  }
+      
+      footer {
+      background-color: #ffbc29;
+/*      min-width: 940px;*/
+      padding: 30px 0;
+      }
+
+	  footer p {
+		  color: #000;
+	  }
+
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{STATIC_URL}}img/favicon.ico">
+    <link rel="apple-touch-icon" href="{{STATIC_URL}}img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{STATIC_URL}}img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{STATIC_URL}}img/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+<!--
+      <div class="topbar">
+          <div class="fill">
+            <div class="container">
+              <a class="brand" href="#">Project name</a>
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+              <form action="" class="pull-right">
+                <input class="input-small" type="text" placeholder="Username">
+                <input class="input-small" type="password" placeholder="Password">
+                <button class="btn" type="submit">Sign in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+-->
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+          <h1>PUG-PE <small>Grupo de Usuários Python de Pernambuco</small></h1>
+        </div>
+        
+        <div class="row">
+          <div class="span10">
+            <h2>Ultimas Noticias</h2>
+            
+            <div class="row">
+                <div class="span9">
+                    <h3>Blog Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis metus non libero condimentum gravida. Nam et diam quis nisi aliquam porta nec quis massa. Duis quis leo lorem, iaculis iaculis nunc. Duis viverra eleifend nisl, non tempus tortor scelerisque non. Vivamus sit amet orci nec metus laoreet commodo. Nulla mattis ultrices urna sit amet vulputate. Sed aliquam sagittis leo, sed faucibus massa tempus eu. Aliquam vitae lorem lectus, et adipiscing libero.</p><p>
+
+                    Suspendisse sagittis massa in urna eleifend pretium. Aliquam faucibus bibendum commodo. Curabitur fringilla malesuada sapien vel vulputate. In tempus ante vel mauris iaculis pellentesque. Nunc bibendum augue quis magna tristique nec adipiscing nunc vehicula. In nisi enim, egestas id imperdiet eu, venenatis non libero. Nulla imperdiet dolor sed quam molestie nec imperdiet felis placerat. Nunc et gravida odio. Praesent tempor dolor justo. Duis ac tortor urna, eu pulvinar nulla. Nam placerat vehicula tortor quis venenatis. Suspendisse potenti. Quisque eget leo sit amet dolor egestas varius. Vivamus vitae metus nisi, at scelerisque neque.</p><p>
+
+                    Aliquam at ligula at ante elementum venenatis. Donec convallis ligula ornare dui congue mollis. Maecenas arcu magna, lacinia vitae iaculis sed, interdum ac odio. Sed tristique aliquet magna, vitae iaculis nisl placerat a. In a tellus purus, quis vulputate libero. Morbi luctus magna eget erat aliquam porta. Quisque sit amet nisl id felis vulputate varius et ut neque. Sed tempor pretium ipsum, eu convallis sapien mattis quis. Quisque vulputate varius odio sit amet volutpat. In quis massa quis elit vulputate placerat. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec mollis lorem vitae risus lobortis sed laoreet nisi laoreet.</p><p>
+
+                    Suspendisse lectus urna, lacinia vitae mollis sed, dapibus in libero. Maecenas sollicitudin faucibus quam quis tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vel justo ligula. Sed eget metus vitae lorem commodo posuere. Morbi vitae feugiat enim. Proin pellentesque orci magna. Mauris aliquet fringilla blandit. Quisque a nisl risus, non porta leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lorem est, congue nec dictum sit amet, congue non libero. Praesent ac lacus enim.</p><p>
+
+                    Suspendisse potenti. Integer molestie laoreet sapien ac elementum. Sed quam neque, vehicula bibendum ullamcorper ut, consequat in lacus. Nam eget vehicula ipsum. Duis id dapibus felis. Phasellus sed nunc ac sapien eleifend mattis auctor vitae velit. Donec pellentesque, sapien a venenatis luctus, eros purus pharetra ligula, et ornare metus justo quis purus. Proin aliquet fringilla vehicula. Nam sapien enim, adipiscing quis dictum ut, tristique faucibus elit. Etiam tortor risus, rutrum id aliquam ullamcorper, tempor quis nibh. Nullam id neque vehicula risus laoreet sollicitudin a nec nunc. </p>
+                </div>
+                <div class="span9">
+                    <h3>Blog Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis metus non libero condimentum gravida. Nam et diam quis nisi aliquam porta nec quis massa. Duis quis leo lorem, iaculis iaculis nunc. Duis viverra eleifend nisl, non tempus tortor scelerisque non. Vivamus sit amet orci nec metus laoreet commodo. Nulla mattis ultrices urna sit amet vulputate. Sed aliquam sagittis leo, sed faucibus massa tempus eu. Aliquam vitae lorem lectus, et adipiscing libero.</p><p>
+
+                    Suspendisse sagittis massa in urna eleifend pretium. Aliquam faucibus bibendum commodo. Curabitur fringilla malesuada sapien vel vulputate. In tempus ante vel mauris iaculis pellentesque. Nunc bibendum augue quis magna tristique nec adipiscing nunc vehicula. In nisi enim, egestas id imperdiet eu, venenatis non libero. Nulla imperdiet dolor sed quam molestie nec imperdiet felis placerat. Nunc et gravida odio. Praesent tempor dolor justo. Duis ac tortor urna, eu pulvinar nulla. Nam placerat vehicula tortor quis venenatis. Suspendisse potenti. Quisque eget leo sit amet dolor egestas varius. Vivamus vitae metus nisi, at scelerisque neque.</p><p>
+
+                    Aliquam at ligula at ante elementum venenatis. Donec convallis ligula ornare dui congue mollis. Maecenas arcu magna, lacinia vitae iaculis sed, interdum ac odio. Sed tristique aliquet magna, vitae iaculis nisl placerat a. In a tellus purus, quis vulputate libero. Morbi luctus magna eget erat aliquam porta. Quisque sit amet nisl id felis vulputate varius et ut neque. Sed tempor pretium ipsum, eu convallis sapien mattis quis. Quisque vulputate varius odio sit amet volutpat. In quis massa quis elit vulputate placerat. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec mollis lorem vitae risus lobortis sed laoreet nisi laoreet.</p><p>
+
+                    Suspendisse lectus urna, lacinia vitae mollis sed, dapibus in libero. Maecenas sollicitudin faucibus quam quis tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vel justo ligula. Sed eget metus vitae lorem commodo posuere. Morbi vitae feugiat enim. Proin pellentesque orci magna. Mauris aliquet fringilla blandit. Quisque a nisl risus, non porta leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lorem est, congue nec dictum sit amet, congue non libero. Praesent ac lacus enim.</p><p>
+
+                    Suspendisse potenti. Integer molestie laoreet sapien ac elementum. Sed quam neque, vehicula bibendum ullamcorper ut, consequat in lacus. Nam eget vehicula ipsum. Duis id dapibus felis. Phasellus sed nunc ac sapien eleifend mattis auctor vitae velit. Donec pellentesque, sapien a venenatis luctus, eros purus pharetra ligula, et ornare metus justo quis purus. Proin aliquet fringilla vehicula. Nam sapien enim, adipiscing quis dictum ut, tristique faucibus elit. Etiam tortor risus, rutrum id aliquam ullamcorper, tempor quis nibh. Nullam id neque vehicula risus laoreet sollicitudin a nec nunc. </p>
+                </div>
+                <div class="span9">
+                    <h3>Blog Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mollis metus non libero condimentum gravida. Nam et diam quis nisi aliquam porta nec quis massa. Duis quis leo lorem, iaculis iaculis nunc. Duis viverra eleifend nisl, non tempus tortor scelerisque non. Vivamus sit amet orci nec metus laoreet commodo. Nulla mattis ultrices urna sit amet vulputate. Sed aliquam sagittis leo, sed faucibus massa tempus eu. Aliquam vitae lorem lectus, et adipiscing libero.</p><p>
+
+                    Suspendisse sagittis massa in urna eleifend pretium. Aliquam faucibus bibendum commodo. Curabitur fringilla malesuada sapien vel vulputate. In tempus ante vel mauris iaculis pellentesque. Nunc bibendum augue quis magna tristique nec adipiscing nunc vehicula. In nisi enim, egestas id imperdiet eu, venenatis non libero. Nulla imperdiet dolor sed quam molestie nec imperdiet felis placerat. Nunc et gravida odio. Praesent tempor dolor justo. Duis ac tortor urna, eu pulvinar nulla. Nam placerat vehicula tortor quis venenatis. Suspendisse potenti. Quisque eget leo sit amet dolor egestas varius. Vivamus vitae metus nisi, at scelerisque neque.</p><p>
+
+                    Aliquam at ligula at ante elementum venenatis. Donec convallis ligula ornare dui congue mollis. Maecenas arcu magna, lacinia vitae iaculis sed, interdum ac odio. Sed tristique aliquet magna, vitae iaculis nisl placerat a. In a tellus purus, quis vulputate libero. Morbi luctus magna eget erat aliquam porta. Quisque sit amet nisl id felis vulputate varius et ut neque. Sed tempor pretium ipsum, eu convallis sapien mattis quis. Quisque vulputate varius odio sit amet volutpat. In quis massa quis elit vulputate placerat. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec mollis lorem vitae risus lobortis sed laoreet nisi laoreet.</p><p>
+
+                    Suspendisse lectus urna, lacinia vitae mollis sed, dapibus in libero. Maecenas sollicitudin faucibus quam quis tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi vel justo ligula. Sed eget metus vitae lorem commodo posuere. Morbi vitae feugiat enim. Proin pellentesque orci magna. Mauris aliquet fringilla blandit. Quisque a nisl risus, non porta leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut lorem est, congue nec dictum sit amet, congue non libero. Praesent ac lacus enim.</p><p>
+
+                    Suspendisse potenti. Integer molestie laoreet sapien ac elementum. Sed quam neque, vehicula bibendum ullamcorper ut, consequat in lacus. Nam eget vehicula ipsum. Duis id dapibus felis. Phasellus sed nunc ac sapien eleifend mattis auctor vitae velit. Donec pellentesque, sapien a venenatis luctus, eros purus pharetra ligula, et ornare metus justo quis purus. Proin aliquet fringilla vehicula. Nam sapien enim, adipiscing quis dictum ut, tristique faucibus elit. Etiam tortor risus, rutrum id aliquam ullamcorper, tempor quis nibh. Nullam id neque vehicula risus laoreet sollicitudin a nec nunc. </p>
+                </div>
+                
+            </div>
+            
+          </div>
+          <div class="span4">
+            <h3>Secondary content</h3>
+            <p>conteudo conteudo conteudo conteudo </p>
+          </div>
+          <div class="span4">
+            <h3>Secondary content</h3>
+            <p>conteudo conteudo conteudo conteudo </p>
+          </div>
+          <div class="span4">
+            <h3>Secondary content</h3>
+            <p>conteudo conteudo conteudo conteudo </p>
+          </div>
+          <div class="span4">
+            <h3>Secondary content</h3>
+            <p>conteudo conteudo conteudo conteudo </p>
+          </div>
+        </div>
+
+      </div>
+      
+      
+    </div> <!-- /container -->
+    <footer>
+        <div class="container">
+        <p>&copy; Company 2011</p>            
+        </div> <!-- end div name -->
+    </footer>
+
+  </body>
+</html>

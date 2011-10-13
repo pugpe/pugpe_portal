@@ -1,11 +1,13 @@
+# -*- coding: utf-8 -*-
 from django.conf.urls.defaults import patterns, include, url
+from django.conf import settings
 
 from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'portal.views.home', name='home'),
+    url(r'^$', 'portal.views.home', name='home'),
     # url(r'^portal/', include('portal.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

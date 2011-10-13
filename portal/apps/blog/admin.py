@@ -1,7 +1,6 @@
 from django.contrib import admin
 
 from models import Post
-from forms import PostAddForm
 
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = { 'slug':['title'] }

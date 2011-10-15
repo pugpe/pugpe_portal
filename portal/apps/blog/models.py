@@ -9,7 +9,7 @@ class Post(models.Model):
     title = models.CharField(verbose_name=u'Título', max_length=200)
     slug = models.SlugField(verbose_name=u'Slug', max_length=200)
     content = models.TextField(verbose_name=u'Conteúdo')
-    datetime = models.DateTimeField(verbose_name=u'Data', auto_now_add=True)
+    pub_date = models.DateTimeField(verbose_name=u'Data de Publicação', auto_now_add=True)
     author = models.ForeignKey(User, verbose_name=u'Autor')
     tags = TagField(verbose_name=u'Tags')
 
@@ -18,4 +18,4 @@ class Post(models.Model):
 
     class Meta:
         verbose_name = u'Post'
-        ordering = ['-datetime']
+        ordering = ['-pub_date']

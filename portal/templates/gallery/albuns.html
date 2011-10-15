@@ -1,0 +1,14 @@
+{% comment %}
+    TODO: Descomentar quando houver base.html
+    {% extends "base.html" %}
+
+{% block content %}
+
+{% endblock %}
+{% endcomment %}
+
+{% for album in albuns %}
+    {# TODO: Instalar app para thumbnail e retirar redimencionamento via css #}
+    <p><img style="width: 250px" src="{{ MEDIA_URL }}{{ album.cover }}" /></p>
+    <p><a href="">{{ album.description }}</a></p>
+{% endfor %}

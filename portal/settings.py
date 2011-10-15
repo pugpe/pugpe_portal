@@ -120,6 +120,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+
+    'tagging',
+
+    'portal.apps.blog',
 )
 
 # A sample logging configuration. The only tangible logging

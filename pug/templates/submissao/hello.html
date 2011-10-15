@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ p_form.as_p }}
+            <p><input type="submit" value="ok" /></p>
+        </form>
+
+
+        <p> Html normal </p>
+        {% for p in palestrantes %}
+            {% if p.nome == 'Fernando' %}
+                <p>legal</p>
+            {% endif %}
+
+            {{ p.nome }} - {{ p.email }} <br />
+        {% endfor %}
+    </body>
+</html>

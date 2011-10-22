@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}PUG-PE{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet">
+    <style type="text/css">
+      <!-- Le extensible style -->
+      {% block style %}
+      {% endblock %}
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{STATIC_URL}}img/favicon.ico">
+    <link rel="apple-touch-icon" href="{{STATIC_URL}}img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{STATIC_URL}}img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{STATIC_URL}}img/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="content">
+        {% block content %}
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>
+            {% block page_header %}
+            PUG-PE <small>Grupo de Usuários Python de Pernambuco</small>
+            {% endblock %}
+          </h1>
+        </div>
+        <!-- Content -->
+        <div class="row">
+          <div class="span10">
+            {% block main_content %}
+            {% endblock %}
+          </div>
+          <div class="row">
+            <div class="span4">
+              <div class="sidebar">
+                {% block side_content %}
+                {% endblock %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+    <footer>
+      <div class="container">
+        {% block footer %}
+          <p>&copy; PUG-PE 2011</p>
+        {% endblock %}
+      </div>
+    </footer>
+  </body>
+</html>

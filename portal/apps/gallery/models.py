@@ -12,7 +12,6 @@ class Album(models.Model):
 
 class Photo(models.Model):
     album = models.ForeignKey(Album)
-    description = models.CharField(max_length=200, 
-null=True, blank=True)
+    description = models.CharField(max_length=200, null=True, blank=True)
     image = models.ImageField(upload_to='uploads/gallery')
     created = models.DateTimeField(auto_now_add=True)

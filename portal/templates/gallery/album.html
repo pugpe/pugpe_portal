@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block main_content %}
-    <h2><{{ album.description }}</h2>
+    <h2>{{ album.description }}</h2>
 
     {# TODO: Instalar app para thumbnail e retirar redimencionamento via css #}
     <p><img style="width: 250px" src="{{ MEDIA_URL }}{{ album.cover }}" /></p>

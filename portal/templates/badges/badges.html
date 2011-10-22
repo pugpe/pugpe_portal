@@ -1,3 +1,11 @@
-{% for badge in badges %}
- <p><img style="width: 250px" src="{{ MEDIA_URL }}{{ badge.image }}" /></p>
-{% endfor %}
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="row">
+  <div class="span10">
+    {% for badge in badges %}
+      {% include "badges/badge.html" %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'portal.views.home', name='home'),
+    url(r'^layout/$', 'portal.views.guideline', name='layout'),
     # url(r'^portal/', include('portal.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -7,7 +7,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'portal.views.home', name='home'),
+    url(r'^$', 'django.views.generic.simple.direct_to_template',
+        {'template': 'index.html'}, name='home'),
     # url(r'^portal/', include('portal.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

@@ -3,3 +3,4 @@
 *.sw*
 local_settings.py
 *.sqlite3
+portal/media/*

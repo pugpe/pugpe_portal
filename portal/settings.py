@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'portal.apps.gallery',
     'portal.apps.badges',
     'portal.apps.event_generator',
+    'portal.apps.palestra',
 )
 
 

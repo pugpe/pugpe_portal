@@ -9,6 +9,8 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'django.views.generic.simple.direct_to_template',
         {'template': 'index.html'}, name='home'),
+    url(r'^layout/$', 'django.views.generic.simple.direct_to_template',
+        {'template': 'guideline.html'}, name='layout'),
     # url(r'^portal/', include('portal.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

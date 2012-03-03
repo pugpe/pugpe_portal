@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block main_content %}
+<p>Descrição: {{ event.description }}</p>
+<p>Descrição Completa: {{ event.full_description }}</p>
+<p>Data: {{ event.date }}</p>
+<p>Imagem: {{ STATIC_URL }}{{ event.image }}</p>
+
+<p>Local</p>
+<p>Descrição: {{ event.location.description }}</p>
+<p>Rua: {{ event.location.street }}</p>
+<p>Número: {{ event.location.number }}</p>
+<p>Código Postal: {{ event.location.postal_code }}</p>
+<p>Cidade: {{ event.location.city }}</p>
+<p>Referência: {{ event.location.reference }}</p>
+{% endblock %}

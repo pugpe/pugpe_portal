@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^blog/', include('portal.apps.blog.urls')),
     url(r'^gallery/', include('portal.apps.gallery.urls')),
     url(r'^badges/', include('portal.apps.badges.urls')),
+    url(r'^encontro/', include('portal.apps.event_generator.urls')),
     url(r'^home/$', 'portal.views.home', name='home'),
 )
 

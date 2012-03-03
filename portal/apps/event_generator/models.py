@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 from django.db import models
+from django.core.urlresolvers import reverse
 
 
 class Location(models.Model):
@@ -37,7 +38,7 @@ class Event(models.Model):
     description = models.CharField(u'Descrição', max_length=100)
     full_description = models.TextField(u'Descrição Completa')
 
-    date = models.DateTimeField()
+    date = models.DateTimeField(u'Data')
     location = models.ForeignKey(
         'event_generator.Location', verbose_name=u'Local',
     )
@@ -47,3 +48,6 @@ class Event(models.Model):
 
     def __unicode__(self):
         return self.description
+
+    def get_absolute_url(self):
+        return reverse('event', kwargs={'slug': self.slug})

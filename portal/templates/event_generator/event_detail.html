@@ -4,6 +4,10 @@
 <p>Descrição Completa: {{ event.full_description }}</p>
 <p>Data: {{ event.date }}</p>
 <p>Imagem: {{ STATIC_URL }}{{ event.image }}</p>
+<p>Palestras:</p>
+{% for lecture in event.lectures.all %}
+    <p>{{ lecture.title }}</p>
+{% endfor %}
 
 <p>Local</p>
 <p>Descrição: {{ event.location.description }}</p>
@@ -12,4 +16,5 @@
 <p>Código Postal: {{ event.location.postal_code }}</p>
 <p>Cidade: {{ event.location.city }}</p>
 <p>Referência: {{ event.location.reference }}</p>
+<p>Mapa: {{ event.location.get_map }}</p>
 {% endblock %}

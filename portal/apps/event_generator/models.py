@@ -29,6 +29,19 @@ class Location(models.Model):
     def __unicode__(self):
         return self.description
 
+    def get_map(self):
+        if self.map:
+            return self.map
+
+        base_url = 'http://maps.google.com.br/maps?q={0}'
+
+        qs = u'{0},{1},{2},{3},{4}'
+        qs = qs.format(
+            self.street, self.number, self.district, self.city, self.state,
+        )
+
+        return base_url.format(qs)
+
 
 class Event(models.Model):
     class Meta:
@@ -43,6 +56,10 @@ class Event(models.Model):
         'event_generator.Location', verbose_name=u'Local',
     )
     image = models.ImageField(upload_to='uploads/events')
+
+    lectures = models.ManyToManyField(
+        'palestra.Lecture', verbose_name=u'Palestras',
+    )
 
     slug = models.SlugField()
 

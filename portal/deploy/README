@@ -1,0 +1,18 @@
+Automação servidor e deploy, servidor temporário.
+
+A presença da chave privada é em razão do fácil deploy, necessário para o Summer of Code, mesma idéia para o local_settings.py
+
+
+Para adicionar chave privada:
+    make addkey
+
+Para deploy:
+    make deploy
+
+Para configuração servidor:
+    make provy
+
+
+Para saber mais sobre softwares utilizados:
+Fabric: http://docs.fabfile.org/en/1.4.0/index.html
+Provy: http://provy.me

@@ -1,0 +1,7 @@
+Fabric==1.4.0
+ssh==1.7.13
+
+-e git://github.com/heynemann/provy.git@1967d391939ff06a34d83f5467ff5080d8c453fc#egg=provy-dev
+Jinja2==2.6
+pycrypto==2.5
+

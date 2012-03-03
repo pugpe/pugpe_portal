@@ -1,2 +1,3 @@
 -r requirements.txt
+MySQL-python==1.2.3
 gunicorn==0.13.1

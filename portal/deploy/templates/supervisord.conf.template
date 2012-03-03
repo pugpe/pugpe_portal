@@ -1,0 +1,53 @@
+[unix_http_server]
+file=/tmp/supervisor.sock
+
+[supervisord]
+logfile={{ log_file }}
+logfile_maxbytes={{ log_file_max_mb }}MB
+logfile_backups={{ log_file_backups }}
+loglevel={{ log_level }}
+pidfile={{ pidfile }}
+nodaemon=false
+minfds=1024
+minprocs=200
+user={{ user }}
+
+[rpcinterface:supervisor]
+supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
+
+[supervisorctl]
+serverurl=unix:///tmp/supervisor.sock
+
+{% for program in programs %}
+[program:{{ program.name }}]
+command={{ program.command }}
+process_name={{ program.name }}{% if program.number_of_processes > 1 %}_%(process_num)s{% endif %}
+numprocs={{ program.number_of_processes }}
+directory={{ program.directory }}
+{% if program.priority %}
+priority={{ program.priority }}
+{% endif %}
+autostart={{ program.auto_start | lower }}
+autorestart={{ program.auto_restart | lower }}
+startretries={{ program.start_retries }}
+stopsignal={{ program.stop_signal }}
+{% if program.user %}
+user={{ program.user }}
+{% endif %}
+redirect_stderr=false
+stdout_logfile={{ program.log_folder}}/{{ program.name }}.stdout.%(process_num)s.log
+stdout_logfile_maxbytes={{ program.log_file_max_mb }}MB
+stdout_logfile_backups={{ program.log_file_backups }}
+stderr_logfile={{ program.log_folder}}/{{ program.name }}.stderr.%(process_num)s.log
+stderr_logfile_maxbytes={{ program.log_file_max_mb }}MB
+stderr_logfile_backups={{ program.log_file_backups }}
+
+{% if program.environment %}
+environment={{ program.environment }}
+{% endif %}
+{% endfor %}
+
+{% if include %}
+[include]
+files = {{ include }}
+{% endif %}

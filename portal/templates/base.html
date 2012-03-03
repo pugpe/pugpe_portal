@@ -6,6 +6,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
     <!-- Le styles -->
     <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/base.css" rel="stylesheet">
@@ -43,14 +48,6 @@
             {% block main_content %}
             {% endblock %}
           </div>
-          <div class="row">
-            <div class="span4">
-              <div class="sidebar">
-                {% block side_content %}
-                {% endblock %}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       {% endblock %}
@@ -64,3 +61,4 @@
     </footer>
   </body>
 </html>
+<!-- vim: set expandtab: -->

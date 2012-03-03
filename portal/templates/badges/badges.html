@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="row">
+  <div class="span10">
+    {% for badge in badges %}
+      {% include "badges/badge.html" %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

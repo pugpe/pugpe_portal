@@ -20,8 +20,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('portal.apps.blog.urls')),
     url(r'^gallery/', include('portal.apps.gallery.urls')),
+    url(r'^badges/', include('portal.apps.badges.urls')),
 )
-
 
 if settings.DEBUG:
         urlpatterns += patterns('django.views.static',

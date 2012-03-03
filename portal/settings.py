@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'portal.apps.blog',
     'portal.apps.gallery',
     'portal.apps.badges',
+    'portal.apps.palestra',
 )
 
 

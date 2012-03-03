@@ -1,9 +1,6 @@
-{% comment %}
-Precisa estender de base, quando esta estiver pronta
 {% extends "base.html" %}
-{% endcomment %}
 
-{% block content %}
+{% block main_content %}
     <h1>{{ post.title }}</h1>
     <p>{{ post.content|linebreaks }}</p>
     <p>Por: {{ post.author.username }} em {{ post.pub_date }}</p>

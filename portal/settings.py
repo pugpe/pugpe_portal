@@ -1,6 +1,8 @@
 import os
+import sys
 # Django settings for portal project.
 PROJECT_ROOT_PATH=os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(PROJECT_ROOT_PATH, "apps"))
 
 
 DEBUG = True
@@ -126,6 +128,7 @@ INSTALLED_APPS = (
     'portal.apps.blog',
     'portal.apps.gallery',
     'portal.apps.badges',
+    'portal.apps.event_generator',
 )
 
 

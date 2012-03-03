@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 
 {% block main_content %}
+{% if user.is_authenticated %}
+    <a href="{% url act_edit album.slug %}">Editar</a>|<a href="">Adicionar fotos</a>
+{% endif %}
     <h2>{{ album.description }}</h2>
 
     {# TODO: Instalar app para thumbnail e retirar redimencionamento via css #}
@@ -11,4 +14,5 @@
             {% include "gallery/photo_thumb.html" %}
         {% endfor %}
     </ul>
+ 
 {% endblock %}

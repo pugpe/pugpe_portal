@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
 {% block main_content %}
+{% if user.is_authenticated %}
+    <a href="{% url act_post_album %}">Postar um albúm</a>
+    <a href="{% url act_my_albuns %}">Meus álbuns</a>
+{% endif %}
     <ul class="media-grid">
         {% for album in albuns %}
         <li>
             <a href="{% url album album.slug %}">
                 <img class="thumbnail" style="width: 250px"
                     src="{{ MEDIA_URL }}{{ album.cover }}" />
-                {{ album.description }}
+                {{ album.title }}
             </a>
         </li>
     {% endfor %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main_content %}
+    {% for event in events %}
+        <p>{{ event.description }}</p>
+        <p><img src="{{ MEDIA_URL }}{{ event.image }}" /> {# TODO: biblioteca thubmnail #}</p>
+        <p>{{ event.date }}</p>
+        <p>{{ event.location.description }}</p>
+        <p><a href="{% url event event.slug %}">link</a></p>
+    {% empty %}
+        <p>Sem eventos</p>
+    {% endfor %}
+{% endblock %}

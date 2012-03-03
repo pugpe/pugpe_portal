@@ -1,4 +1,14 @@
 {% extends "base.html" %}
+
 {% block main_content %}
-    <p></p>
+    <h2>Posts</h2>
+    <div id="content">
+        {% for post in latest_posts %}
+            <div class="post">
+                <h3><a href="{% url post post.slug %}">{{ post.title }}</a></h3>
+                {{ post.content|linebreaks }}
+                <p>Por: {{ post.author.username }} em {{ post.pub_date }}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

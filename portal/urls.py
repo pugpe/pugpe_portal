@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     url(r'^blog/', include('portal.apps.blog.urls')),
     url(r'^gallery/', include('portal.apps.gallery.urls')),
     url(r'^badges/', include('portal.apps.badges.urls')),
+    url(r'^home/$', 'portal.views.home', name='home'),
 )
 
 if settings.DEBUG:

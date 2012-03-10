@@ -1,13 +1,7 @@
 {% extends "base.html" %}
-{% block main_content %}
 <p>Descrição: {{ event.description }}</p>
 <p>Descrição Completa: {{ event.full_description }}</p>
 <p>Data: {{ event.date }}</p>
-<p>Imagem: {{ STATIC_URL }}{{ event.image }}</p>
-<p>Palestras:</p>
-{% for lecture in event.lectures.all %}
-    <p>{{ lecture.title }}</p>
-{% endfor %}
 
 <p>Local</p>
 <p>Descrição: {{ event.location.description }}</p>
@@ -17,4 +11,127 @@
 <p>Cidade: {{ event.location.city }}</p>
 <p>Referência: {{ event.location.reference }}</p>
 <p>Mapa: {{ event.location.get_map }}</p>
+
+{% block main_content %}
+<div class="banner">
+    <img src="{{ MEDIA_URL }}{{ event.image }}" alt="{{ event.description }}"  title="{{ event.description }}" />
+</div>
+
+<span>{{ event.full_description }}</span>
+
+<span> <strong>{{ event.location.description }}, {{ event.location.address }}</strong> <br/>[ <a id="como-chegar" title="google-maps" href="#">Como chegar lá?</a> ]</span>
+{# TODO: Lógica mapa #}
+{# TODO: Redes sociais, sugestão: curtir específico do evento e não pug pe geral #}
+{# TODO: Campo de imagem para cartas, sugestão: geração automática com PIL #}
+
+<div class="">
+    <strong>Programação</strong>
+    <table cellspacing="0" cellpadding="0" class="table" id="progDias">
+        <thead>
+            <tr>
+                <th>Início</th>
+                <th>Fim</th>
+                <th>Palestra</th>
+                <th>Palestrante</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for event_lecture in event.eventlecture_set.all %}
+            <tr id="{% cycle "001#700;485" "002#750;555" %}">
+                <td>{{ event_lecture.start }}</td>
+                <td>{{ event_lecture.end }}</td>
+                <td>{{ event_lecture.lecture.title }}</td>
+                <td>{{ event_lecture.lecture.speaker }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br/>
+    {# TODO: Gerar programação completa #}
+    {#<a href="Palestras.pdf">Download da programação completa</a>#}
+</div>
+
+<div class="left w960 blc_twitter">
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+        new TWTR.Widget({
+            version : 2,
+            type : 'profile',
+            rpp : 6,
+            interval : 6000,
+            width : 450,
+            height : 250,
+            theme : {
+                shell : {
+                    background : '#376a94',
+                    color : '#ffffff'
+                },
+                tweets : {
+                    background : '#fdfdfd',
+                    color : '#333333',
+                    links : '#376a94',
+                }
+            },
+            features : {
+                scrollbar : false,
+                loop : false,
+                live : false,
+                hashtags : true,
+                timestamp : true,
+                avatars : false,
+                behavior : 'all',
+                id : "tblock"
+            }
+        }).render().setUser('pugpe').start();
+
+    </script>
+</div>
+
+
+<div class="right w450">
+    <div class="banner_job">
+        <img src="{{ STATIC_URL }}img/event/camisetas.png" alt="Peça já sua camiseta PUG-PE" id="camisetas"/>
+        <img src="{{ STATIC_URL}}img/event/canecas.png" alt="Peça já sua caneca PUG-PE" id="canecas"/>
+    </div>
+</div>
+<div class="right w450" style="margin-top:10px;">
+    <div id="fb-root"></div>
+    <script>
+        ( function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if(d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+
+    <div class="fb-comments" data-href="http://www.facebook.com/pages/Grupo-de-Usu%C3%A1rios-de-Python-de-Pernambuco-PUG-PE/213195992034947" data-num-posts="2" data-width="450"></div>
+</div>
+<div class="clear"></div>
+
+<span class="title">Gostou da nossa iniciativa? Então divulgue!</span>
+Escolha um dos banners abaixo e adicione ao seu site ou blogue!
+<div style="text-align: center;" class="bloco_dados">
+    <table width="100%" class="tabela_padrao tdcenter">
+        <tbody><tr>
+            <td><img alt="XVI Encontro do PUG-PE (Eu vou!)" src="img/dv1.png"/>
+            <br/>
+            <span class="spn-link" id="add-dvg1">Adicionar!</span></td>
+            <td><img alt="XVI Encontro do PUG-PE (Eu vou!)" src="img/dv2.png"/>
+            <br/>
+            <span class="spn-link" id="add-dvg2">Adicionar!</span></td>
+            <td><img alt="XVI Encontro do PUG-PE (Eu vou!)" src="img/dv3.png"/>
+            <br/>
+            <span class="spn-link" id="add-dvg3">Adicionar!</span></td>
+        </tr>
+    </tbody></table>
+</div>
+
 {% endblock %}
+
+
